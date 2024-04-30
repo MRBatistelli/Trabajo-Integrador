@@ -1,3 +1,47 @@
-.buy__cardimg img {
-    width: 10%;
+.main__banner{
+    text-align: center;
+    font-size: 2em;
+    margin: 2%;
+}
+
+#conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    margin: 2%;    
+      
+}
+
+.car__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    text-align: center;
+    border: 1px solid #0007;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #0007;
+}
+
+.img__conteiner {        
+    width: 90%;    
+}
+
+img {
+    width: 100%;
+    min-height: 60%;    
+}
+
+.cart__button {
+    margin-top: 5%;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: #3A8AE7;
+    color: #F7FAFF;
+}
+
+.cart__button:hover {
+   transform: scale(0.9 );
+   font-weight: 600;
 }

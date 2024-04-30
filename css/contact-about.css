@@ -1,0 +1,21 @@
+/* ESTILOS BASICOS MAIN */
+body{
+    margin: auto;
+    box-sizing: border-box;
+    background: linear-gradient(#F7FAFF, #000);
+    font-size: 16px;
+    color: #151516;
+}
+.bloque{
+    display: inline-block;
+    min-width: 150px;
+    background-color: transparent;
+    margin:auto;
+    width: 100%;
+    flex: 1;
+    font-size: 20px;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 10px;
+    align-items: center;
+}
