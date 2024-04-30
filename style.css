@@ -35,7 +35,7 @@ body {
 }
 
 .nav__img {
-    width: 15%;
+    width: 18%;
     padding: 1%;
 }
 
@@ -47,7 +47,7 @@ body {
 .nav__title {
     font-size: 1.5em;
     font-weight: 700;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .search {
@@ -104,6 +104,10 @@ body {
     outline: 2px solid #0009;
 }
 
+.responsive__menu {
+    display: none;
+}
+
 
 /* ESTILOS BASICOS MAIN */
 
@@ -116,13 +120,13 @@ body {
 
 @keyframes engranaje {
     0% {
-        transform: translateX(-150px) rotate(0deg);
+        transform: translateX(-120px) rotate(0deg);
       }
       50% {
         transform: translateX(0) rotate(180deg);
       }
       100% {
-        transform: translateX(150px) rotate(360deg);
+        transform: translateX(120px) rotate(360deg);
       }
     }  
 
@@ -137,10 +141,11 @@ body {
 }
 
 .footer__nav {
-    display: flex;
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
     background-color: #b3b5b9dd;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1.5%;
 }
 
