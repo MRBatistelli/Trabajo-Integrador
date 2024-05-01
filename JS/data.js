@@ -55,6 +55,7 @@ showData().then((data) => {
     const imagePath = `./assets/img/${item.model}.webp`;
 
     const img = document.createElement("img");
+    img.className = "card__img"
     img.src = imagePath;
     img.alt = `Imagen de ${item.model}`;
     imgConteiner.appendChild(img);

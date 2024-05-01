@@ -17,25 +17,22 @@ body {
 
 .header {
     position: sticky;
-    top: 0;
-}
-
-.conteiner {
-    display: flex;
     min-height: 60px;
+    top: 0;
+    display: flex;
     background-color: #b3b5b9dd;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
 .nav__logo {
     display: flex;
-    max-width: 30%;
+    min-width: 30%;
 }
 
 .nav__img {
-    width: 18%;
+    max-width: 15%;
     padding: 1%;
 }
 
@@ -50,20 +47,6 @@ body {
     margin-top: 4%;
 }
 
-.search {
-    display: flex;
-}
-
-.search i {
-    color: #0009;
-    padding: 7px;
-}
-
-.search__imput {
-    font-family: var(--font-family);
-    min-width: 250px;
-    border-radius: 5px;
-}
 
 .list {
     display: flex;
@@ -104,10 +87,58 @@ body {
     outline: 2px solid #0009;
 }
 
-.responsive__menu {
+
+.responsive__menu-abrir,
+.responsive__menu-cerrar {
     display: none;
 }
 
+@media screen and (max-width: 1080px) {
+    .responsive__menu-abrir {
+        display: block;        
+        font-size: 1.8em;
+        margin-right: 2%;
+    }
+
+    .responsive__menu-cerrar {
+        display: block;
+        font-size: 1.8em;
+        text-align: right;
+        
+    }
+
+    .nav__conteiner {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;        
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        min-height: 100vh;
+        min-width: 30vw     ;
+        background-color: #b3b5b9;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    }
+
+    .visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: end;        
+    }
+
+    .list__li {
+        margin-top: 4rem;
+    }
+
+    
+
+}
 
 /* ESTILOS BASICOS MAIN */
 
@@ -120,15 +151,17 @@ body {
 
 @keyframes engranaje {
     0% {
-        transform: translateX(-120px) rotate(0deg);
-      }
-      50% {
+        transform: translateX(-80px) rotate(0deg);
+    }
+
+    50% {
         transform: translateX(0) rotate(180deg);
-      }
-      100% {
-        transform: translateX(120px) rotate(360deg);
-      }
-    }  
+    }
+
+    100% {
+        transform: translateX(80px) rotate(360deg);
+    }
+}
 
 
 .footer__img {
@@ -137,12 +170,12 @@ body {
 
 .footer__img {
     width: 25%;
-    margin-left: 5%;    
+    margin-left: 5%;
 }
 
 .footer__nav {
     display: grid;
-    grid-template-columns:1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     background-color: #b3b5b9dd;
     align-items: center;
     justify-content: center;
