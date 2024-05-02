@@ -2,15 +2,19 @@
 
 const showData = async () => {
     try {
-        const ulr1 = "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/6277/years/2017-3";
-        const ulr2 = "https://fipe.parallelum.com.br/api/v2/cars/brands/44/models/4336/years/2008-1";
+        const ulr1 = "https://fipe.parallelum.com.br/api/v2/cars/brands/29/models/7758/years/2021-1";
+        const ulr2 = "https://fipe.parallelum.com.br/api/v2/cars/brands/29/models/8058/years/2018-1";
         const ulr3 = "https://fipe.parallelum.com.br/api/v2/cars/brands/44/models/1943/years/2000-3";
-        const ulr4 = "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/8370/years/2019-1";
+        const ulr4 = "https://fipe.parallelum.com.br/api/v2/cars/brands/44/models/4336/years/2008-1";
+        const ulr5 = "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/6277/years/2017-3";
+        const ulr6 = "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/8370/years/2019-1";
         const results = await Promise.all([
             fetch(ulr1),
             fetch(ulr2),
             fetch(ulr3),
-            fetch(ulr4)
+            fetch(ulr4),
+            fetch(ulr5),
+            fetch(ulr6)
 
         ]);
         const promiseData = await results.map(result => result.json());
