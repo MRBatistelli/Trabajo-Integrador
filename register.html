@@ -42,6 +42,7 @@
                     <div class="form__div">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required placeholder="Ingresa tu email...">
+                        <div id="check__user">&nbsp;</div>
                     </div>
 
                     <div class="form__div">
@@ -55,7 +56,8 @@
 
                     <div class="form__div">
                         <label for="edad">Edad:</label>
-                        <input type="text" id="edad" name="edad" required placeholder="Ingresa tu edad...">
+                        <input type="number" id="age" name="edad" required placeholder="Ingresa tu edad...">
+                        <div id="check__age">&nbsp;</div>
                     </div>
 
                     <div class="form__div radio">
@@ -73,14 +75,15 @@
 
                     <div class="form__div">
                         <label for="contraseña">Contraseña:</label>
-                        <input type="password" id="contraseña" name="contraseña" required
-                            placeholder="Ingresa tu contraseña...">
+                        <input type="password" id="password" name="contraseña" required placeholder="Ingresa tu contraseña...">
+                        <div id="check__password">&nbsp;</div>
                     </div>
 
                     <div class="form__div">
                         <img class="capcha__img" src="./assets/img/capcha.webp" alt="cac 2024">
                         <label for="imagenCapcha">Ingrese el texto que ve en la imagen</label>
                         <input type="text" name="imagenCapcha" id="capcha__txt">
+                        <div id="check__capcha">&nbsp;</div>
                     </div>
 
                     <div class="form__div">
@@ -96,6 +99,7 @@
 
     </footer>
     <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
+    <script src="./JS/checkForms.js"></script>
     <script src="./JS/responsiveMenu.js"></script>
 </body>
 

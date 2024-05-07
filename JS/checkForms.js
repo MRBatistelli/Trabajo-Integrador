@@ -2,15 +2,21 @@
 function checkForms() {
     const emailInput = document.querySelector("#email");
     const passwordInput = document.querySelector("#password");
+    const capchaInput = document.querySelector("#capcha__txt");
+    const ageInput = document.querySelector("#age");
     const emailError = document.querySelector("#check__user");
     const passwordError = document.querySelector("#check__password");
+    const capchaError = document.querySelector("#check__capcha");
+    const ageError = document.querySelector("#check__age");
 
     let error = false;
 
     // Reset de mensajes de error
     emailError.innerText = "\u00A0";
     passwordError.innerText = "\u00A0"; 
-
+    capchaError.innerText = "\u00A0";
+    ageError.innerText = "\u00A0";
+    
     // Verificar campo email vacío
     if (emailInput.value.trim() === "") {
         emailError.innerText = "Completa usuario/mail";
@@ -27,12 +33,34 @@ function checkForms() {
         error = true;
     }
 
+    // Verificar texto ingresado en capcha
+    if ((capchaInput.value.trim()).toLowerCase() !== "cac2024") {
+        capchaError.innerText = "Verifique el texto ingresado";
+        error = true;
+        capchaError.focus();
+    }
+
+    //verificar que el usuario sea mayor de edad
+    const age = parseInt(ageInput.value.trim(), 10);
+
+    if (isNaN(age) || age < 18) {
+        ageError.innerText = "Debe ser mayor de edad para registrarse";
+        error = true;
+        ageError.focus();
+    }
+
+
+
     if (!error) {
         // Si no hay errores, reinicia campos y muestra un mensaje de confirmación
         emailInput.value = "";
         passwordInput.value = "";
+        capchaInput.value = "";
+        ageInput.value = "";
         emailError.innerText = "\u00A0";
         passwordError.innerText = "\u00A0";
+        capchaError.innerText = "\u00A0";
+        ageError.innerText = "\u00A0";
 
         alert("Los datos fueron ingresados correctamente");
     }
