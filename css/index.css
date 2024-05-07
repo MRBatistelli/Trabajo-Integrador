@@ -1,6 +1,8 @@
 .main__banner{
     text-align: center;
     font-size: 2em;
+    font-weight: 700;
+    text-wrap: balance;
     margin: 2%;
 }
 

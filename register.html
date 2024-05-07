@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/register.css">
 
     <title>LOS INDOMABLES</title>
 </head>
@@ -16,57 +17,83 @@
 <body>
     <header class="header" id="header">
 
-        
+
     </header>
     <main class="main">
 
-        <fieldset>
-            <legend><h2>Formulario de Registro</h2></legend>
+        <div class="register">
 
-            <form action="procesar_formulario.php" method="post" >
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Proporciona tu nombre...">
-                </div>
-                <br>
-                <div>
-                    <label for="apellido" >Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Proporciona tu apellido...">
-                </div>
-                <br>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Proporciona tu email...">
-                </div>
-                <br>
-                <div>
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="password" id="contraseña" name="contraseña" required placeholder="Proporciona tu contraseña...">
-                </div>
-                <br>
-                <div>
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required placeholder="Proporciona tu edad...">
-                </div>
-                <br>
-                <div>
-                    <label for="genero">Género:</label>
-                    <select id="genero" name="genero" required>
-                        <option value="masculino">Masculino</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </fieldset>
-       
+            <fieldset class="form__register">
+                <legend>
+                    <h2>Formulario de Registro</h2>
+                </legend>
+
+                <form onsubmit="return checkForms();">
+                    <div class="form__div">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre...">
+                    </div>
+
+                    <div class="form__div">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required placeholder="Ingresa tu apellido...">
+                    </div>
+
+                    <div class="form__div">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ingresa tu email...">
+                    </div>
+
+                    <div class="form__div">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form__div">
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" name="edad" required placeholder="Ingresa tu edad...">
+                    </div>
+
+                    <div class="form__div radio">
+                        <h4>Tipo de Usuario:</h4>
+                        <span class="radio__btn">
+                            <label for="tipo de usuario">Particular</label>
+                            <input type="radio" id="tipo de usuario" name="tipo de usuario" value="Particular" required>
+                        </span>
+                        <span class="radio__btn2">
+                            <label for="tipo de usuario">Consecionaria</label>
+                            <input type="radio" id="tipo de usuario" name="tipo de usuario" value="Consecionaria"
+                                required>
+                        </span>
+                    </div>
+
+                    <div class="form__div">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" id="contraseña" name="contraseña" required
+                            placeholder="Ingresa tu contraseña...">
+                    </div>
+
+                    <div class="form__div">
+                        <img class="capcha__img" src="./assets/img/capcha.webp" alt="cac 2024">
+                        <label for="imagenCapcha">Ingrese el texto que ve en la imagen</label>
+                        <input type="text" name="imagenCapcha" id="capcha__txt">
+                    </div>
+
+                    <div class="form__div">
+                        <button class="list--login" type="submit">Registrarse</button>
+                    </div>
+                </form>
+            </fieldset>
+
+        </div>
+
     </main>
     <footer class="footer" id="footer">
-        
+
     </footer>
     <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
     <script src="./JS/responsiveMenu.js"></script>

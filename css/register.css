@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-image: url("../assets/img/fondo2.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.register {
+    min-width: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form__register {
+    padding: 5%;
+    color: #F7FAFF;
+    background-color: #0009;
+    border-radius: 10px;
+}
+
+.form__div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#genero {
+    font-size: 1.3em;
+    padding: 2%;
+}
+
+.form__div label {
+    font-size: 1.3em;
+    margin-bottom: 2%;
+}
+
+.form__div input {
+    font-size: 1.3em;
+    padding: 3%;
+}
+
+.radio {
+    display: inline-block;      
+        
+}
+
+.radio h4 {
+    margin-bottom: 4%;
+}
+
+.capcha__img{
+    max-width: 40%;
+    margin-top: 4%;
+}

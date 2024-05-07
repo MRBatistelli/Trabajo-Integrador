@@ -5,45 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/login.css">
 
     <title>LOS INDOMABLES</title>
 </head>
 
 <body>
-    <header class="header" id="header">        
-    
+    <header class="header" id="header">
+
     </header>
     <main class="main">
 
-        <fieldset>
-            <legend><h2>Ingreso</h2></legend>
+        <div class="login">
+            <fieldset class="form__login">
+                <legend>
+                    <h2>Ingreso</h2>
+                </legend>
     
-            <form action="procesar_formulario.php" method="post" >
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Proporciona tu email...">
-                </div>
-                
-                <div>
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="password" id="contraseña" name="contraseña" required placeholder="Proporciona tu contraseña...">
-                </div>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </fieldset>
+                <form onsubmit="return checkForms();" class="form">
+                    <div class="form__div">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ingresa tu Usuario..." aria-describedby="check__user">
+                        <div id="check__user">&nbsp;</div>
+                    </div>
+    
+                    <div class="form__div">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="contraseña" required placeholder="Ingresa tu contraseña..." aria-describedby="check__password">
+                        <div id="check__password">&nbsp;</div>
+                    </div>
+                    <div class="form__div">
+                        <button class="list--login" type="submit">Ingresar</button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
 
-       
+
     </main>
     <footer class="footer" id="footer">
-        
+
     </footer>
     <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
+    <script src="./JS/checkForms.js"></script>
     <script src="./JS/responsiveMenu.js"></script>
 </body>
 

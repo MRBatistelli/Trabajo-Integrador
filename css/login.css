@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-image: url("../assets/img/fondo2.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.login {
+    min-width: 30%;
+    margin-top: 5%;
+
+}
+
+.form__login {
+    padding: 5%;
+    color: #F7FAFF;
+    background-color: #0009;
+    border-radius: 10px;    
+}
+
+
+.form__div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.form__div label {
+    font-size: 1.3em;
+    margin-bottom: 2%;
+}
+
+.form__div input {
+    font-size: 1.3em;
+    padding: 3%;
+}
+
+#check__user {
+    color: #fff;
+}
+
+#check__password {
+    color: #fff;
+}
