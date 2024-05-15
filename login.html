@@ -26,17 +26,17 @@
                     <h2>Ingreso</h2>
                 </legend>
     
-                <form onsubmit="return checkForms();" class="form">
+                <form onsubmit="return checkFormLog();" class="form">
                     <div class="form__div">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required placeholder="Ingresa tu Usuario..." aria-describedby="check__user">
-                        <div id="check__user">&nbsp;</div>
+                        <input type="email" id="emailLog" name="email" placeholder="Ingresa tu Usuario..." aria-describedby="check__user">
+                        <div id="check__userLog">&nbsp;</div>
                     </div>
     
                     <div class="form__div">
                         <label for="password">Contraseña:</label>
-                        <input type="password" id="password" name="contraseña" required placeholder="Ingresa tu contraseña..." aria-describedby="check__password">
-                        <div id="check__password">&nbsp;</div>
+                        <input type="password" id="passwordLog" name="contraseña" placeholder="Ingresa tu contraseña..." aria-describedby="check__password">
+                        <div id="check__passwordLog">&nbsp;</div>
                     </div>
                     <div class="form__div">
                         <button class="list--login" type="submit">Ingresar</button>
@@ -51,7 +51,7 @@
 
     </footer>
     <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
-    <script src="./JS/checkForms.js"></script>
+    <script src="./JS/checkFormLog.js"></script>
     <script src="./JS/responsiveMenu.js"></script>
 </body>
 

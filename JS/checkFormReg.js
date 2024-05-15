@@ -19,7 +19,7 @@ function checkForms() {
     
     // Verificar campo email vacío
     if (emailInput.value.trim() === "") {
-        emailError.innerText = "Completa usuario/mail";
+        emailError.innerText = "Completar email";
         error = true;
         emailInput.focus();
     }
@@ -43,8 +43,8 @@ function checkForms() {
     //verificar que el usuario sea mayor de edad
     const age = parseInt(ageInput.value.trim(), 10);
 
-    if (isNaN(age) || age < 18) {
-        ageError.innerText = "Debe ser mayor de edad para registrarse";
+    if (isNaN(age) || age < 18 || age > 99) {
+        ageError.innerText = "Debe tener entre 18 y 99 años de edad para registrarse";
         error = true;
         ageError.focus();
     }
