@@ -42,6 +42,7 @@ const { createApp, ref, onMounted, watch } = Vue;
             model: car.model || 'Desconocido',
             year: car.modelYear || 'N/A',
             price: car.price || 'N/A',
+            id: car.codeFipe
           });
           saveCartToLocalStorage();
           alert(`Agregaste ${car.model} al carrito.`);

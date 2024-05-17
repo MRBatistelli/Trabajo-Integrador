@@ -1,0 +1,139 @@
+.cart {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    z-index: 1;
+}
+
+.cart h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+
+.conteiner {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    font-size: 1.5em;
+    border: 2px solid #0007;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #0007;
+    margin: 2%;
+    padding: .5%;
+}
+
+.conteiner button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #d42c2c;
+    min-width: 5%;
+    margin: 2%;
+    padding: 1% 0;
+}
+
+
+.conteiner button:hover {
+    transform: scale(.9);    
+}
+
+.img__cart {
+    max-width: 30%;
+}
+
+
+.img__cart img {
+    max-width:100%;
+}
+
+.card__description {
+    max-width: 25%;
+    padding: 2%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+.card__price {
+    margin-bottom: 20%;
+    padding: 2%;
+}
+
+.cart__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1%;
+    margin: 1% 4%;      
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+    background-color: #d42c2c;
+
+}
+
+.cart__btn:hover {
+    transform: scale(.9);    
+}
+
+.resume__conteiner {
+    text-align: left;
+    max-width: 80%;
+    font-size: 1.5em;
+    border: 2px solid #0007;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #0007;
+    margin: 0 0 15% 10%;
+    padding: 2% 1%;
+}
+
+.resume__conteiner h3 {
+    margin-bottom: 2%;
+}
+
+.checkbox {
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 550px) {
+    .conteiner {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        font-size: 1em;
+
+}
+.img__cart {
+    max-width: 70%;
+}
+.card__description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+    padding: 4%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+}
+}

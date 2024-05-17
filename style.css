@@ -24,6 +24,7 @@ body {
     background-color:var(--nav-color);
     align-items: center;
     justify-content: space-around;
+    z-index: 10;
 }
 
 
