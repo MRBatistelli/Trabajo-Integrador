@@ -1,13 +1,9 @@
-  const { createApp, ref, onMounted, watch } = Vue;
+  const { createApp, ref, onMounted, computed } = Vue;
 
       const shoppingCart = {
         setup() {        
           const cart = ref(getCartFromLocalStorage());
-          const options = ref({
-            alarma: false,
-            polarizado: false
-          })
-
+          
           // Método para obtener el carrito desde localStorage
           function getCartFromLocalStorage() {
             const cartData = localStorage.getItem("shoppingCart");
@@ -29,13 +25,37 @@
           function removeItem(id) {
             cart.value = cart.value.filter(item => item.id !== id);
             saveCartToLocalStorage();
-          }          
+          }
+
+          //Finalizar compra
+          function buyCart() {
+            if (cart.value.length === 0) {
+              alert("El carrito está vacío. Agrega al menos un artículo.");
+              return;
+            }
+            cart.value = [];
+            saveCartToLocalStorage();
+            alert(`GRACIAS POR SU COMPRA`);
+          }
+
+          
+          
+          // Propiedad calculada para obtener el total del carrito
+    const totalPrice = computed(() => {
+      return cart.value.reduce((total, item) => {
+        {
+          return total + item.price;
+        }
+        
+      }, 0);
+    });
           
           return {
-            cart,
-            options,
+            cart,        
             clearCart,
-            removeItem
+            removeItem,
+            buyCart,
+            totalPrice
           };
         },
         template: 
@@ -55,7 +75,7 @@
         <button @click="removeItem(item.id)"><i class="fa-solid fa-xmark"></i></button>
         <div class="column">
             <div class="card__price">
-                <p>Precio: {{ item.price }}</p>
+                <p>Precio: R$ {{ item.price }}</p>
             </div>
             
         </div>
@@ -64,18 +84,11 @@
         <button @click="clearCart" class="cart__btn"><i class="fa-solid fa-trash"></i></button>
         </div>
         <div class="resume__conteiner">
-              <h3>Resumen del Pedido</h3>
-              
-                    <div class="checkbox">
-                        <input type="checkbox" id="alarma" v-model="options.alarma">
-                        <label for="alarma">Añadir Alarma</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" id="polarizado" v-model="options.polarizado">
-                        <label for="polarizado">Añadir Polarizado</label>
-                    </div>
-                    
-              <h3>Total</h3>
+              <h3>Su Compra incluye:</h3>         
+              <h4><i class="fa-solid fa-gift"></i> Polarizado y Alarma</h4>         
+              <h4><i class="fa-solid fa-gift"></i> Transferencia</h4>     
+              <h3>Total: R$ {{ totalPrice }}</h3>
+              <button @click="buyCart" class="buy__btn">Finalizar Compra</button>
         </div>`
       };
 
