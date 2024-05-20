@@ -48,6 +48,7 @@
                     <div class="form__div">
                         <label for="genero">Género:</label>
                         <select id="genero" name="genero" required>
+                            <option value="">Seleccione una opción</option>
                             <option value="masculino">Masculino</option>
                             <option value="femenino">Femenino</option>
                             <option value="otro">Otro</option>
@@ -55,33 +56,33 @@
                     </div>
 
                     <div class="form__div">
-                        <label for="edad">Edad:</label>
-                        <input type="number" id="age" name="edad" placeholder="Ingresa tu edad...">
+                        <label for="age">Edad:</label>
+                        <input type="number" id="age" name="age" placeholder="Ingresa tu edad...">
                         <div id="check__age">&nbsp;</div>
                     </div>
 
                     <div class="form__div radio">
                         <h4>Tipo de Usuario:</h4>
                         <span class="radio__btn">
-                            <label for="tipo de usuario">Particular</label>
-                            <input type="radio" id="tipo de usuario1" name="tipo de usuario" value="Particular">
+                            <label for="tipodeusuario1">Particular</label>
+                            <input type="radio" id="tipodeusuario1" name="tipodeusuario1" value="Particular">
                         </span>
                         <span class="radio__btn2">
-                            <label for="tipo de usuario">Consecionaria</label>
-                            <input type="radio" id="tipo de usuario2" name="tipo de usuario" value="Consecionaria"
+                            <label for="tipodeusuario2">Consecionaria</label>
+                            <input type="radio" id="tipodeusuario2" name="tipodeusuario2" value="Consecionaria"
                                 required>
                         </span>
                     </div>
 
                     <div class="form__div">
-                        <label for="contraseña">Contraseña:</label>
-                        <input type="password" id="password" name="contraseña" placeholder="Ingresa tu contraseña...">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña...">
                         <div id="check__password">&nbsp;</div>
                     </div>
 
                     <div class="form__div">
                         <img class="capcha__img" src="./assets/img/capcha.webp" alt="cac 2024">
-                        <label for="imagenCapcha">Ingrese el texto que ve en la imagen</label>
+                        <label for="capcha__txt">Ingrese el texto que ve en la imagen</label>
                         <input type="text" name="imagenCapcha" id="capcha__txt">
                         <div id="check__capcha">&nbsp;</div>
                     </div>
