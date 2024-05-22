@@ -1,4 +1,5 @@
 const { createApp, ref, onMounted, watch } = Vue;
+const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MDNjN2Q2Yy01ZDZkLTRmZjctYjRhNC1jZjAxYTAzODc4ZWIiLCJlbWFpbCI6Im1hdXJvYmF0aTE5ODdAZ21haWwuY29tIiwiaWF0IjoxNzE2MjUyNjQ5fQ.iIXv0Ab7tXC7S25MzRoQulbEUMJNQrntUMiUco5FiDE'
 
 const App = {
   setup() {
@@ -30,6 +31,11 @@ const App = {
       }
     });
 
+    // Observa cambios en el carrito y guarda en localStorage
+    watch(cart, () => {
+      saveCartToLocalStorage();
+    }, { deep: true });
+
     // Método para guardar el carrito en localStorage
     function saveCartToLocalStorage() {
       localStorage.setItem("shoppingCart", JSON.stringify(cart.value));
@@ -58,15 +64,16 @@ const App = {
 
 
 
-      cart.value.push({
+      const newItem = {
         brand: car.brand || 'Desconocido',
         model: car.model || 'Desconocido',
         year: car.modelYear || 'N/A',
         price: price || 'N/A',
         id: car.codeFipe
-      });
-      saveCartToLocalStorage();
+      };
+      cart.value.push(newItem);
       alert(`Agregaste ${car.model} al carrito.`);
+      saveCartToLocalStorage();
     }
 
     return {
