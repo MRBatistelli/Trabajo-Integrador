@@ -19,8 +19,8 @@
     outline: 1px solid #fff;
     border-radius: 10px;
     background-color: #0007;
-    padding: 2%;
-    margin: 2%;
+    padding: 6%;
+    margin: 4% 2%;
     text-align: center;
     box-shadow: 0 0 10px 0 #0007;
     opacity: 0;
@@ -29,7 +29,7 @@
 }
 
 
-.card__about h4,h3 {
+.card__desc {
     font-size: 1.8em;
     color: #fff;
     text-shadow: 2px 2px 4px #0009;
@@ -51,6 +51,10 @@
     animation-delay: 1.5s;
 }
 
+.card__about:nth-child(5) {
+    animation-delay: 2s;
+}
+
 @keyframes slideIn {
     to {
         opacity: 1;
@@ -58,7 +62,7 @@
     }
 }
 
-.card__about h4:hover,h3:hover {
+.card__desc:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -67,37 +71,40 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;        
+    align-items: center;         
 }
 
 .contact__list li {
     list-style-type: none;
     padding: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
     text-align: center;
-    font-size: 1.8em;
-    background-color: #f9f9f9;
+    color: #fff;
+    font-size: 1.5em;
+    background-color: #0007;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    width: 80%;
+    border: 1px solid #111;
+    outline: 1px solid #fff;
+    box-shadow: 0 0 10px 0 #0007;
+    text-shadow: 2px 2px 4px #0009;
     transition: transform 0.3s, background-color 0.3s;    
 }
 
 .contact__list li:hover {
     transform: scale(1.05);
-    background-color: #e0e0e0;
+    background-color: #0009;
 }
 
 .contact__list a {
     text-decoration: none;
-    color: #0066cc;
+    color: #6bb2f8;
+    font-size: .8em;
     font-weight: bold;
     transition: color 0.3s, text-decoration 0.3s;  
     
 }
 
 .contact__list a:hover {
-    color: #003366;
+    color: #a1c9f2;
     text-decoration: underline;
 }
