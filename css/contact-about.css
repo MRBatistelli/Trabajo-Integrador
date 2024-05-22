@@ -87,6 +87,7 @@
     outline: 1px solid #fff;
     box-shadow: 0 0 10px 0 #0007;
     text-shadow: 2px 2px 4px #0009;
+    cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;    
 }
 
