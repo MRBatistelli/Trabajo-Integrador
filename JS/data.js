@@ -31,18 +31,14 @@ const App = {
       }
     });
 
-    // Observa cambios en el carrito y guarda en localStorage
-    watch(cart, () => {
-      saveCartToLocalStorage();
-    }, { deep: true });
-
+    
     // Método para guardar el carrito en localStorage
     function saveCartToLocalStorage() {
       localStorage.setItem("shoppingCart", JSON.stringify(cart.value));
     }
 
 
-    // Método para agregar artículos al carrito
+    // Funcion para agregar artículos al carrito
     function addToCart(car) {
 
       // Comprobar si el artículo ya está en el carrito
@@ -63,7 +59,7 @@ const App = {
       }
 
 
-
+      //agregar producto al carrito
       const newItem = {
         brand: car.brand || 'Desconocido',
         model: car.model || 'Desconocido',

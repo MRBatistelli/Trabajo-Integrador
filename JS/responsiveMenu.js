@@ -63,6 +63,8 @@ header.innerHTML = `<section class="nav__logo">
     <h3 class="team__name">Desarrolado por: DIEGO LAIME - ENZO ESQUERCIA - JOSE GONZALEZ - MAURO BATISTELLI</h3>
 </div> `;
 
+//MENU RESPONSIVO
+
 //selecionar etiquetas
 const abrirMenu = document.querySelector("#abrir");
 const cerrarMenu = document.querySelector("#cerrar");
