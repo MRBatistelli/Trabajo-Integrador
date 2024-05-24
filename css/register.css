@@ -27,13 +27,18 @@
     padding: 2%;
 }
 
+.form__div input[type="file"] {
+    font-size: 1.1em;
+    width: 100%;
+}
+
 #genero {
     font-size: 1.3em;
     padding: 2%;
 }
 
 .form__div label {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 2%;
 }
 
