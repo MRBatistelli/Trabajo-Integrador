@@ -9,9 +9,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: transparent;    
-    margin: 4%;    
+    background-color: transparent;
+    margin: 4%;
 }
+
+.body__about {
+    background-image: url('../assets/img/concesionarias.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
 
 .card__about {
     min-width: 30%;
@@ -20,7 +29,7 @@
     border-radius: 10px;
     background-color: #0007;
     padding: 6%;
-    margin: 4% 2%;
+    margin: 4% 5%;
     text-align: center;
     box-shadow: 0 0 10px 0 #0007;
     opacity: 0;
@@ -30,7 +39,8 @@
 
 
 .card__desc {
-    font-size: 1.8em;
+    font-size: 1.9em;
+    font-weight: bold;
     color: #fff;
     text-shadow: 2px 2px 4px #0009;
 }
@@ -67,11 +77,11 @@
     cursor: pointer;
 }
 
-.contact__list{
+.contact__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;         
+    align-items: center;
 }
 
 .contact__list li {
@@ -88,7 +98,7 @@
     box-shadow: 0 0 10px 0 #0007;
     text-shadow: 2px 2px 4px #0009;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;    
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .contact__list li:hover {
@@ -101,11 +111,15 @@
     color: #6bb2f8;
     font-size: .8em;
     font-weight: bold;
-    transition: color 0.3s, text-decoration 0.3s;  
-    
+    transition: color 0.3s, text-decoration 0.3s;
+
 }
 
 .contact__list a:hover {
     color: #a1c9f2;
     text-decoration: underline;
+}
+
+.map__conteiner iframe {
+    max-width: 100%;
 }
