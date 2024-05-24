@@ -31,7 +31,7 @@
                 <form onsubmit="return checkForms();">
                     <div class="form__div">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required  placeholder="Ingresa tu nombre...">
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre...">
                     </div>
 
                     <div class="form__div">
@@ -41,7 +41,7 @@
 
                     <div class="form__div">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email"  placeholder="Ingresa tu email...">
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu email...">
                         <div id="check__user">&nbsp;</div>
                     </div>
 
@@ -71,6 +71,11 @@
                             <input type="radio" id="tipodeusuario2" name="tipodeusuario" value="Consecionaria" required>
                             <label for="tipodeusuario2">Consecionaria</label>
                         </span>
+                    </div>
+
+                    <div class="form__div">
+                        <label for="imageUpload">Sube una imagen de tú DNI o CUIT</label>
+                        <input type="file" id="imageUpload" name="imageUpload" required accept="image/*">
                     </div>
 
                     <div class="form__div">
