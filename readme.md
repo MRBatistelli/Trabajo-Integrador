@@ -1,5 +1,5 @@
 
-# Los Indomables  –Fuerza y pasión sobre ruedas-
+# Los Indomables  –Fuerza y Pasión por los Autos-
 
 Esta es una web dedicada a la venta de autos usados.
 
