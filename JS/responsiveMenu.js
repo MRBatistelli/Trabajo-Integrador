@@ -7,7 +7,7 @@ header.innerHTML = `<section class="nav__logo">
 <img class="nav__img" src="./assets/img/logo.webp" alt="logo">
 <a href="index.html" class="nav__index">
     <h1 class="nav__title">LOS INDOMABLES</h1>
-    <p>Fuerza y Pasión sobre Ruedas</p>
+    <p>Fuerza y Pasión por los Autos</p>
 </a>
 </section>
 
