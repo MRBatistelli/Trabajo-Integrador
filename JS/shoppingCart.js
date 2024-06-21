@@ -65,7 +65,7 @@
 
         <div v-for="item in cart" :key="item.id" class="conteiner">
         <div class="img__cart">
-            <img :src="'./assets/img/' + item.model + '.webp'" alt="">
+            <img :src="item.image" :alt="item.model">
         </div>
         <div class="card__description">
             <h4>{{ item.brand }}</h4> 
@@ -75,7 +75,7 @@
         <button @click="removeItem(item.id)"><i class="fa-solid fa-xmark"></i></button>
         <div class="column">
             <div class="card__price">
-                <p>Precio: R$ {{ item.price }}</p>
+                <p>Precio: $ {{ item.price }}</p>
             </div>
             
         </div>
@@ -87,7 +87,7 @@
               <h3>Su Compra incluye:</h3>         
               <h4><i class="fa-solid fa-gift"></i> Polarizado y Alarma</h4>         
               <h4><i class="fa-solid fa-gift"></i> Transferencia</h4>     
-              <h3>Total: R$ {{ totalPrice }}</h3>
+              <h3>Total: $ {{ totalPrice }}</h3>
               <button @click="buyCart" class="buy__btn">Finalizar Compra</button>
         </div>`
       };

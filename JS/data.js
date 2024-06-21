@@ -1,5 +1,4 @@
 const { createApp, ref, onMounted, watch } = Vue;
-const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MDNjN2Q2Yy01ZDZkLTRmZjctYjRhNC1jZjAxYTAzODc4ZWIiLCJlbWFpbCI6Im1hdXJvYmF0aTE5ODdAZ21haWwuY29tIiwiaWF0IjoxNzE2MjUyNjQ5fQ.iIXv0Ab7tXC7S25MzRoQulbEUMJNQrntUMiUco5FiDE'
 
 const App = {
   setup() {
@@ -12,16 +11,9 @@ const App = {
     // Fetch data cuando el componente se monta
     onMounted(async () => {
       try {
-        const urls = [
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/29/models/7758/years/2021-1",
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/29/models/8058/years/2018-1",
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/44/models/1943/years/2000-3",
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/44/models/4336/years/2008-1",
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/6277/years/2017-3",
-          "https://fipe.parallelum.com.br/api/v2/cars/brands/59/models/8370/years/2019-1"
-        ];
-        const results = await Promise.all(urls.map(url => fetch(url)));
-        const data = await Promise.all(results.map(res => res.json()));
+        const url = "https://mrbati.pythonanywhere.com/vehiculos"
+        const results = await fetch(url);
+        const data = await results.json();
         cars.value = data;
       } catch (err) {
         error.value = err;
@@ -51,21 +43,19 @@ const App = {
       //Pasar precio de string a num
       let price = 'N/A';
       if (car.price) {
-        let priceJson = car.price;
-        priceJson = priceJson.replace('R$', '').trim();
-        priceJson = priceJson.replace(/\./g, '');
-        priceJson = priceJson.replace(',', '.');
+        let priceJson = car.price;        
         price = parseFloat(priceJson);
       }
 
 
       //agregar producto al carrito
       const newItem = {
+        image: car.image,
         brand: car.brand || 'Desconocido',
         model: car.model || 'Desconocido',
-        year: car.modelYear || 'N/A',
-        price: price || 'N/A',
-        id: car.codeFipe
+        year: car.year || 'N/A',
+        price: price || 'N/A',        
+        id: car.id
       };
       cart.value.push(newItem);
       alert(`Agregaste ${car.model} al carrito.`);
@@ -86,14 +76,15 @@ const App = {
         <div v-else id="conteiner">
             <div v-for="car in cars" :key="car.model" class="car__card">
                 <div class="img__conteiner">
-                    <img class="card__img" :src="'./assets/img/' + car.model + '.webp'"
+                    <img class="card__img" :src="car.image"
                         :alt="'Imagen de ' + car.model" />
                 </div>
                 <div class="text__conteiner">
                     <h3>{{ car.brand }}</h3>
                     <h4>{{ car.model }}</h4>
-                    <p>Año: {{ car.modelYear }}</p>
-                    <p>Precio: {{ car.price }}</p>
+                    <p>Año: {{ car.year }}</p>
+                    <p>Precio: $ {{ car.price }}</p>
+                    <p>Stock: {{ car.stock }}</p>
                 </div>
                 <button @click="addToCart(car)" class="cart__button">Agregar al Carrito</button>
             </div>

@@ -22,6 +22,7 @@ header.innerHTML = `<section class="nav__logo">
     <li class="list__li"><a class="list__item list--register" href="./register.html">Registrarse</a></li>
     <li class="list__li"><a class="list__item list--login" href="./login.html">Ingresa <i
                 class="fa-solid fa-right-to-bracket"></i></a></li>
+    <li class="list__li"><a class="list__item list--register" href="./admin.html">Admin</a></li>
     <li class="list__li"><a class="list__item list--cart" href="./buy.html"><i
                 class="fa-solid fa-cart-shopping"></i></a></li>
 </ul>
@@ -60,7 +61,7 @@ header.innerHTML = `<section class="nav__logo">
 </section>  
 </div>
 <div class="team">
-    <h3 class="team__name">Desarrolado por: DIEGO LAIME - ENZO ESQUERCIA - JOSE GONZALEZ - MAURO BATISTELLI</h3>
+    <p class="team__name">Desarrolado por: DIEGO LAIME - ENZO ESQUERCIA - JOSE GONZALEZ - MAURO BATISTELLI</p>
 </div> `;
 
 //MENU RESPONSIVO

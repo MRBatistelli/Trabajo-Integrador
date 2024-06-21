@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/register.css">
+
+    <title>LOS INDOMABLES</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+
+
+    </header>
+
+    <main class="main">
+
+        <div class="register" id="app">
+
+            <fieldset class="form__register">
+                <legend>
+                    <h2>Modificar Vehiculo</h2>
+                </legend>
+                <form>
+                    <div class="form__div">
+                        <label for="id">ID</label>
+                        <input type="text" name="id" id="id" disabled v-model="vehiculo.id">
+                    </div>
+                    <div class="form__div">
+                        <label for="brand">Fabricante</label>
+                        <input type="text" name="brand" id="brand" v-model="vehiculo.brand">
+                    </div>
+                    <div class="form__div">
+                        <label for="model">Modelo</label>
+                        <input type="text" name="model" id="model" v-model="vehiculo.model">
+                    </div>
+                    <div class="form__div">
+                        <label for="year">Año</label>
+                        <input type="text" name="year" id="year" v-model="vehiculo.year">
+                    </div>
+                    <div class="form__div">
+                        <label for="price">Precio</label>
+                        <input type="number" name="price" id="price" v-model.number="vehiculo.price">
+                    </div>
+                    <div class="form__div">
+                        <label for="stock">Stock</label>
+                        <input type="number" name="stock" id="stock" v-model.number="vehiculo.stock">
+                    </div>
+                    <div class="form__div">
+                        <label for="image">Imagen</label>
+                        <input type="text" name="image" id="image" v-model="vehiculo.image">
+                        <img width="100" :src="vehiculo.image" alt="">
+                    </div>
+                    <div class="form__div">
+                        <button class="list--login" type="button" v-on:click="modificar()">Modificar</button>
+                    </div>
+                </form>
+
+            </fieldset>
+
+        </div>
+
+
+    </main>
+    <footer class="footer" id="footer">
+
+    </footer>
+    <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
+    <script src="./JS/responsiveMenu.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./JS/vehiculos.js"></script>
+</body>
+
+</html>
