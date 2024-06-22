@@ -32,8 +32,7 @@ function checkFormLog() {
         // Si no hay errores, reinicia campos y muestra un mensaje de confirmación
         emailInput.value = "";
         passwordInput.value = "";        
-
-        alert("Los datos fueron ingresados correctamente");
+        
     }
 
     return !error; // Devuelve falso si hay un error para evitar el envío del formulario
