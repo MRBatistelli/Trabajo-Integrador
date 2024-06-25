@@ -18,6 +18,7 @@ const App = {
             admin: false
         });
 
+
         const url = "https://mrbati.pythonanywhere.com/users"
 
         const fetchData = async () => {
@@ -102,9 +103,6 @@ const App = {
                 }
             }
         };
-
-
-
 
 
         onMounted(() => {

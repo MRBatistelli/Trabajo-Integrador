@@ -16,43 +16,46 @@
 
 <body>
     <header class="header" id="header">
-
     </header>
-    <main class="main">
 
-        <div class="login">
+    <main class="main">
+        <div class="login" id="app">
             <fieldset class="form__login">
                 <legend>
                     <h2>Ingreso</h2>
                 </legend>
-    
-                <form onsubmit="return checkFormLog();" class="form">
+
+                <form class="form" @submit.prevent="login">
                     <div class="form__div">
                         <label for="emailLog">Email:</label>
-                        <input type="email" id="emailLog" name="emailLog" placeholder="Ingresa tu Usuario..." aria-describedby="check__userLog">
+                        <input type="email" id="emailLog" name="emailLog" v-model="email"
+                            placeholder="Ingresa tu Usuario..." aria-describedby="check__userLog">
                         <div id="check__userLog">&nbsp;</div>
                     </div>
-    
+
                     <div class="form__div">
                         <label for="passwordLog">Contraseña:</label>
-                        <input type="password" id="passwordLog" name="passwordLog" placeholder="Ingresa tu contraseña..." aria-describedby="check__passwordLog">
+                        <input type="password" id="passwordLog" name="passwordLog" v-model="password"
+                            placeholder="Ingresa tu contraseña..." aria-describedby="check__passwordLog">
                         <div id="check__passwordLog">&nbsp;</div>
                     </div>
                     <div class="form__div">
                         <button class="list--login" type="submit">Ingresar</button>
                     </div>
                 </form>
+                <div v-if="message">{{ message }}</div>
+                <div v-if="error">{{ error.message }}</div>
             </fieldset>
         </div>
-
-
     </main>
-    <footer class="footer" id="footer">
 
+    <footer class="footer" id="footer">
     </footer>
+
     <script src="https://kit.fontawesome.com/dc7c87b4fd.js" crossorigin="anonymous"></script>
-    <script src="./JS/checkFormLog.js"></script>
     <script src="./JS/responsiveMenu.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./JS/login.js"></script>
 </body>
 
 </html>
