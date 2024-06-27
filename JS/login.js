@@ -11,8 +11,8 @@ createApp({
         const url = "https://mrbati.pythonanywhere.com/users"
 
 
-        function saveLoguedUserToLocalStorage() {
-            localStorage.setItem("loguedUser", JSON.stringify(loguedUser.value));
+        function saveLoggedUserToLocalStorage() {
+            localStorage.setItem("loggedUser", JSON.stringify(loguedUser.value));
           }
 
         const login = async () => {
@@ -27,8 +27,8 @@ createApp({
                     if(user.admin === true){
                         window.location.href = "./admin.html";
                     }else{window.location.href = "./index.html";}
-                    //seguir aca
-                    saveLoguedUserToLocalStorage()
+                    loguedUser.value.push(user);
+                    saveLoggedUserToLocalStorage()
                 } else {
                     message.value = 'Error de login: Credenciales inválidas';                    
                 }

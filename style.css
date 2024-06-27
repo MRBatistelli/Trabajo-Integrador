@@ -79,6 +79,16 @@ body {
     outline: 2px solid #F7FAFF;
 }
 
+.list--logout {
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: #e35647;
+}
+
+.list--logout:hover {
+    outline: 2px solid #F7FAFF;
+}
+
 .list--cart {
     padding: 12px 15px;
     border-radius: 5px;
