@@ -55,7 +55,6 @@
             <li v-else class="list__li"><a class="list__item list--register" href="./profile.html">¡Hola {{user[0].name}}!</a></li>
             <li v-if="user.length == 0" class="list__li"><a class="list__item list--login" href="./login.html">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a></li>
             <li v-else class="list__li"><a class="list__item list--logout" v-on:click="logout">Salir <i class="fa-solid fa-right-from-bracket"></i></a></li>
-            <li v-if="user.length > 0 && user[0].admin" class="list__li"><a class="list__item list--admin" href="./admin.html">Admin</a></li>
             <li class="list__li"><a class="list__item list--cart" href="./buy.html"><i class="fa-solid fa-cart-shopping"></i></a></li>            
         </ul>
     </nav>`
@@ -78,13 +77,3 @@ abrirMenu.addEventListener("click", () => {
 cerrarMenu.addEventListener('click', () => {
     nav.classList.remove('visible')
 });
-
-// boton logout
-const logoutButton = document.querySelector('#logout');
-if (logoutButton) {
-    logoutButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.removeItem('loggedUser');
-        window.location.href = '/';
-    });
-}

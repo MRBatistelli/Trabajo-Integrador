@@ -25,7 +25,7 @@ createApp({
                 if (user) {
                     message.value = 'Login exitoso';                    
                     if(user.admin === true){
-                        window.location.href = "./admin.html";
+                        window.location.href = "./index.html";
                     }else{window.location.href = "./index.html";}
                     loguedUser.value.push(user);
                     saveLoggedUserToLocalStorage()

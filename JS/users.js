@@ -1,4 +1,3 @@
-
 const { createApp, ref, onMounted, watch, reactive } = Vue;
 
 const App = {
@@ -46,7 +45,7 @@ const App = {
             } catch (err) {
                 console.error(err);
             }
-        };
+        };        
 
         const modificar = async () => {
             user.admin = (user.admin === 'true' || user.admin === true);
@@ -61,8 +60,8 @@ const App = {
             try {
                 await fetch(updateUrl, options);
                 alert("Registro modificado");
-                fetchData();
-                window.location.href = "./users.html";
+                fetchData();                
+                window.location.href = "./profile.html";
             } catch (err) {
                 console.error(err);
                 alert("Error al modificar Usuario");

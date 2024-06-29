@@ -73,7 +73,7 @@
                         <label for="password">Contraseña</label>
                         <input type="text" name="password" id="password" v-model.number="user.password">
                     </div>
-                    <div class="form__div radio">
+                    <div v-if="user.admin" class="form__div radio">
                         <h4>Administrador:</h4>
                         <span class="radio__btn">
                             <input type="radio" id="tipodeusuario3" name="administrador" value="true" required v-model="user.admin">
