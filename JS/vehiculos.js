@@ -57,7 +57,7 @@ const fetchData = async () => {
         await fetch(updateUrl, options);
         alert("Registro modificado");
         fetchData();
-        window.location.href = "./admin.html";
+        window.location.href = "./vehiculos.html";
       } catch (err) {
         console.error(err);
         alert("Error al modificar Vehiculo");
