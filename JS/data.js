@@ -1,4 +1,5 @@
 const { createApp, ref, onMounted } = Vue;
+
 const App = {
   setup() {
     const loading = ref(true);
@@ -6,10 +7,8 @@ const App = {
     const cars = ref([]);
     const cart = ref([]);
     const loggedUser = localStorage.getItem("loggedUser");
-    const loggedUserArray = JSON.parse(loggedUser)
-        
+    const loggedUserArray = JSON.parse(loggedUser);
 
-    
     // Fetch data cuando el componente se monta
     onMounted(async () => {
       try {
@@ -24,7 +23,7 @@ const App = {
         loading.value = false;
       }
     });
-    
+
     // Método para guardar el carrito en localStorage
     function saveCartToLocalStorage() {
       localStorage.setItem("shoppingCart", JSON.stringify(cart.value));
@@ -35,7 +34,6 @@ const App = {
       try {
         const urlCarts = "https://mrbati.pythonanywhere.com/carts";
         const userID = loggedUserArray[0].id;
-        console.log(userID)
         const response = await fetch(urlCarts, {
           method: 'POST',
           headers: {
@@ -54,11 +52,11 @@ const App = {
     // Función para agregar artículos al carrito
     async function addToCart(car) {
       try {
-        // Comprobar si el usuario esta logueado     
-      if (loggedUser === null) {        
-        alert('Debe registrarse para poder realizar una compra');
-        return;
-      }
+        // Comprobar si el usuario está logueado
+        if (loggedUser === null) {
+          alert('Debe registrarse para poder realizar una compra');
+          return;
+        }
 
         // Pasar precio de string a num
         let price = 'N/A';
@@ -110,7 +108,7 @@ const App = {
       cars,
       addToCart,
     };
-  },   
+  },
   template: `
       <div>
         <div v-if="loading" class="main__banner">Cargando...</div>

@@ -12,8 +12,10 @@
                 return loggedUser ? JSON.parse(loggedUser) : null;
             }
 
-            function logout() {
+            function logout() {                                
                 localStorage.removeItem('loggedUser');
+                localStorage.removeItem('cartId')
+                localStorage.removeItem('shoppingCart')
                 window.location.href = '/';
 
             }

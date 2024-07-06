@@ -103,6 +103,8 @@ const App = {
             }
         };
 
+        
+
 
         onMounted(() => {
             fetchData();
@@ -118,7 +120,7 @@ const App = {
             user,
             eliminar,
             modificar,
-            agregar
+            agregar,           
 
         };
     },
